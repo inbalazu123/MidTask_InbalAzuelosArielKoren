@@ -1,0 +1,309 @@
+
+body {
+  background-color: black;
+  color: white; 
+  min-height: 100vh;
+  flex-direction: column;
+  min-height: 100vh;
+  
+}
+
+
+
+
+/* //תיבת חיפוש */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; 
+  margin-bottom: 10px; 
+}
+.search-container a{
+color: #99B9FF; 
+margin-right: 10px;
+}
+
+#search-input {
+  padding: 8px; 
+  height: 30px;
+}
+
+#search-btn {
+  padding: 8px 12px; 
+  background-color: #99B9FF; 
+  color: black; 
+  font-weight: bold;
+  border: none; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 30px;
+}
+
+.btn-primary {
+  background-color: #99B9FF;
+  border-radius: 26px;
+  color: black;
+  font-weight: bold;
+
+}
+
+
+
+/* //עיצוב טתמונה ראשית */
+.header {
+  position: relative;
+  text-align: center;
+}
+
+.header h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 5vw; 
+}
+
+.header img {
+  width: 100%;
+  max-width: 100vw; 
+  height: auto; 
+}
+
+
+
+
+
+
+
+/*פופ אפ */
+.modal-body {
+  color: black; 
+}
+
+
+
+
+/* עיצוב התמונות הקטנות */
+img {
+  width: 90%; 
+  height: auto; 
+} 
+
+
+
+
+
+/* סגנון הניווט */
+nav {
+  background-color: #99B9FF; 
+  padding: 10px 20px; 
+}
+
+/* סגנון כפתור הניווט במסך פלאפון */
+.btn-mobile {
+  display: none; 
+}
+
+/* סגנון הרשימה של הניווט */
+ul {
+  list-style-type: none; 
+  margin: 0;
+  padding: 0;
+}
+
+/* סגנון הקישורים ברשימת הניווט */
+ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+/* סגנון קישור הטקסט */
+ul li a {
+  color: black; 
+  text-decoration: none;
+}
+
+/* סגנון קישור הטקסט כאשר נעכב עליו */
+ul li a:hover {
+  text-decoration: underline; 
+}
+
+
+
+
+
+
+
+
+
+
+/*  גדול סגנון הניווט במסך מחשב */
+@media (min-width: 990px) {
+  .btn-mobile {
+      display: none; 
+  }
+  .flex-container-nav {
+      display: flex;
+      justify-content: flex-end;
+  }
+  .hide-mobile {
+      display: block !important;
+  }
+  
+}
+
+
+
+/* סגנון הניווט במסך פלאפון */
+@media  (max-width: 600px) {
+  .btn-mobile {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 50px; 
+      height: 20px; 
+      background-color: transparent;
+      border: none;
+    
+    
+  }
+  .btn-mobile img {
+      width: 190%;
+      height: auto;
+  }
+  .hide-mobile {
+      display: none !important; /* הסתרת הניווט במסך פלאפון */
+  }
+  ul {
+      background-color: #99B9FF;
+      width: 100%;
+      position: absolute;
+      top: 39px;
+      right: 0;
+      z-index: 1000;
+  }
+  ul li {
+      text-align: center;
+      margin-right: 0;
+  }
+  ul li a {
+      display: block;
+      padding: 20px;
+      border-bottom: 1px solid #444;
+      color: black; 
+      text-decoration: none; 
+  }
+  ul li a:hover {
+      text-decoration: underline;
+  }
+}
+
+
+
+
+
+/* עיצוב הכרטסיות */
+
+.generator-item {
+  border: 4px solid white;
+  width: calc(50% - 20px); 
+  height: 200px; 
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 16px;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  padding: 10px; 
+  justify-content: space-between; 
+  align-items: center; 
+  height: 290px; 
+  margin-bottom: 20px; 
+  flex: 1;
+ 
+}
+
+/* Media queries for different screen sizes */
+@media (min-width: 601px) and (max-width: 980px) {
+  .generator-item {
+    border: 4px solid white;
+  width: calc(50% - 20px);
+  height: 200px; 
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 16px; 
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  padding: 10px; 
+  justify-content: space-between; 
+  align-items: center; 
+  height: 290px; 
+  margin-bottom: 20px; /
+    
+  }
+  /* עיצוב התמונות הקטנות */
+  img {
+    width: 60%; 
+    height: auto; 
+  } 
+
+  /* כפתור בגודל מסך 600-800 פיקסלים */
+ 
+  .generator-item .btn {
+    width: calc(100% - 60px); 
+    height: 60px; 
+  }
+  .generator-item h2 {
+    font-size: 1rem; 
+  }
+}
+
+
+@media (min-width: 980px) {
+  .generator-item {
+    width: calc(20% - 20px);
+    height: 200px;
+    margin: 10px;
+    padding: 10px;
+    height: 320px;
+  }
+
+  
+}
+
+/* כותרת */
+.generator-item h2 {
+  flex: 0 0 auto; 
+  text-align: center;
+  font-size: 1.4rem; 
+}
+
+/* תוכן  */
+.generator-item p {
+  flex: 0 0 auto; 
+  text-align: center; 
+  font-size: 1rem; 
+}
+
+/* כפתור */
+.generator-item .btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+  width: calc(100% - 40px); 
+  height: 40px;
+  line-height: 40px;
+  font-size: min(1rem, calc(4vw + 4vh));
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

@@ -1,0 +1,83 @@
+﻿<!doctype html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="JavaScript Prog 3">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Telem">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>תכנות 3 - JavaScript</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+<!-- //סרגל ניווט -->
+<body>
+  <nav>
+    <button id="nav-button" class="btn-mobile hide" onclick="toggleNav()"><img src="image/nav.svg"
+            alt="ניווט"></button>
+    <ul id="main-nav" class="flex-container-nav hide-mobile">
+        <!-- <button id="close-nav-button" class="btn-mobile" onclick="toggleNav()"><img src="images/nav-close.svg"
+                alt="סגירה"></button> -->
+        <li><a href="#">דף הבית</a></li>
+        <li><a href="#">אודות</a></li>
+        <li><a href="#">צור קשר</a></li>
+    </ul>
+</nav>
+
+  <section class="header">
+    <img src="image/header.svg" >
+    <h1>היבטים במעבדת עיניים</h1>
+  </section>
+
+
+
+  <div class="search-container">
+    <input type="text" id="search-input" placeholder="הזן קטגוריה">
+    <button id="search-btn">חפש</button> 
+    <a href="index.html">ניקוי</a>
+  </div>
+
+ 
+
+  <div id="generators-container" class="generators-container"></div>
+
+
+    <!-- Bootstrap Modal -->
+    <div class="modal fade" id="full-content-modal" tabindex="-1" aria-labelledby="full-content-modal-label" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="full-content-modal-label"></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h5 id="full-content-title"></h5>
+              <p id="full-content-info"></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    
+
+
+
+
+</body>
+
+
+</html>
+
+
